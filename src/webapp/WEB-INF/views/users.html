@@ -3,30 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Users</title>
-    <style>
-        table th, table td {
-            padding: 10px 5px;
-            font-family: sans-serif;
-            font-size: 14px;
-            border-style: solid;
-            border-width: 1px;
-            background: ivory;
-        }
-        button {
-            padding: 5px;
-            background-color: chartreuse;
-        }
-        .buttonDelete {
-            background: #fd3434;
-            color: white;
-        }
-        .buttonEdit {
-            background: gold;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
-    </style>
+
 </head>
 <body>
 <h1>Users</h1>
@@ -34,15 +11,6 @@
 <br>
 <br>
 <table border="1">
-    <tr>
-        <th th:width="50">UserId</th>
-        <th th:width="120">Name</th>
-        <th th:width="120">Surname</th>
-        <th th:width="50">Age</th>
-        <th th:width="150">Email</th>
-        <th th:width="50">Edit</th>
-        <th th:width="50">Delete</th>
-    </tr>
     <tr th:each="users : ${users}">
 
         <td><a th:href="@{'/' + ${users.userId}}" th:utext="${users.userId}">UserId</a></td>

@@ -1,10 +1,14 @@
 package web.model;
 
-import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -22,9 +26,6 @@ public class User {
 
     @Column
     private String email;
-
-    public User() {
-    }
 
     @Override
     public String toString() {
