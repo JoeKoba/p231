@@ -23,7 +23,6 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan("web")
 public class HibernateConfig {
-
     private final Environment env;
 
     public HibernateConfig(Environment env) {
